@@ -30,5 +30,8 @@ puts "Hey, #{name}, what's your birthday?"
 birthday = DateTime.parse(gets.chomp)
 today = DateTime.now
 countdown = (birthday - today).to_i
+if countdown < 0
+  countdown = countdown + 365
+end
 puts "Awesome!  Your birthday is in #{countdown} days!  Happy birthday in advance!"
 end
