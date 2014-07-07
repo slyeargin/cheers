@@ -7,6 +7,12 @@
 #
 # Note: the “a” vs. “an”
 
+# Hey, Abby, what’s your birthday?
+# And, replying based on the output with a notification of how many days away their birthday is:
+#
+# Awesome!  Your birthday is in 45 days! Happy Birthday in advance!
+require 'date'
+
 puts "What's your name?"
 name = gets.chomp.upcase
 if name.empty?
@@ -20,4 +26,9 @@ else
   end
 end
 puts "#{name}'s just GRAND!"
+puts "Hey, #{name}, what's your birthday?"
+birthday = DateTime.parse(gets.chomp)
+today = DateTime.now
+countdown = (birthday - today).to_i
+puts "Awesome!  Your birthday is in #{countdown} days!  Happy birthday in advance!"
 end
