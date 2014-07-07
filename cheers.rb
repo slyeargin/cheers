@@ -29,9 +29,14 @@ puts "#{name}'s just GRAND!"
 puts "Hey, #{name}, what's your birthday?"
 birthday = DateTime.parse(gets.chomp)
 today = DateTime.now
-countdown = (birthday - today).to_i
-if countdown < 0
-  countdown = countdown + 365
+if birthday < today
+  countdown = (today - birthday).to_i
+else
+  countdown = (birthday - today).to_i
 end
-puts "Awesome!  Your birthday is in #{countdown} days!  Happy birthday in advance!"
+if countdown == 0
+  puts "Happy Birthday!"
+else
+  puts "Awesome!  Your birthday is in #{countdown} days!  Happy birthday in advance!"
+end
 end
