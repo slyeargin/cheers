@@ -20,9 +20,9 @@ if name.empty?
 else
   name.each_char do |char|
     if char == "A" || char == "E" || char == "H" || char == "I" || char == "L" || char == "M" || char == "N" || char == "O" || char == "R" || char == "S" || char == "X"
-      puts "Give me an … #{char.upcase}!"
+      puts "Give me an … #{char}!"
     else
-      puts "Give me a … #{char.upcase}!"
+      puts "Give me a … #{char}!"
   end
 end
 puts "#{name}'s just GRAND!"
