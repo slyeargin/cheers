@@ -27,7 +27,8 @@ else
 end
 puts "#{name}'s just GRAND!"
 puts "Hey, #{name}, what's your birthday?"
-birthday = DateTime.parse(gets.chomp)
+input = Date.parse(gets.chomp)
+birthday = Date.new(Date.today.year, input.month, input.day)
 today = DateTime.now
 if birthday < today
   birthday = birthday >> 12
